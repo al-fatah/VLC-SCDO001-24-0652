@@ -4,6 +4,7 @@
 
 class Employee:
     def __init__(self,name,id,dept):
+        # instance variables
         self.name = name
         self.id = id
         self.dept = dept
@@ -12,3 +13,4 @@ class Employee:
         return f"name={self.name}, id={self.id}, department={self.dept}"
 
 
+# self represents an instance
