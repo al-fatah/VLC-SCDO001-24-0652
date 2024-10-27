@@ -46,3 +46,10 @@ class EmployeeManager:
     def list_employees(self):
         for emp in self.employees:
             print(emp)
+
+    # check for the existence of an employee
+    def emp_present(self, id):
+        for e in self.employees:
+            if e.id == id:
+                return True
+        return False

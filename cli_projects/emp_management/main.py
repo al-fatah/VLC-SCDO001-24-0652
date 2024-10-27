@@ -27,9 +27,12 @@ def main():
             new_employee.create_employee(emp_name,emp_id,emp_dept)
         elif option == 2:
             emp_id = int(input("Enter the Employee's id to Update: "))
-            emp_name = input("Enter the New Employee Name: ")
-            emp_dept = input("Enter the New Department: ")
-            new_employee.update_employee(emp_id,emp_name,emp_dept)
+            if new_employee.emp_present(emp_id):
+                emp_name = input("Enter the New Employee Name: ")
+                emp_dept = input("Enter the New Department: ")
+                new_employee.update_employee(emp_id,emp_name,emp_dept)
+            else:
+                print("Employee Not found")
         elif option == 3:
             emp_id = int(input("Enter the Employee's id to Delete: "))
             new_employee.delete_employee(emp_id)
