@@ -34,14 +34,15 @@ def main():
             while True:
                 try:
                     emp_id = int(input("Enter the Employee's id to Update: "))
+                    if new_employee.emp_present(emp_id):
+                        emp_name = input("Enter the New Employee Name: ")
+                        emp_dept = input("Enter the New Department: ")
+                        new_employee.update_employee(emp_id,emp_name,emp_dept)
+                    else:
+                        print("Employee Not found")
                 except ValueError:
                     print("Enter a number")
-            if new_employee.emp_present(emp_id):
-                emp_name = input("Enter the New Employee Name: ")
-                emp_dept = input("Enter the New Department: ")
-                new_employee.update_employee(emp_id,emp_name,emp_dept)
-            else:
-                print("Employee Not found")
+            
         elif option == 3:
             while True:
                 try:
