@@ -10,7 +10,8 @@ class Employee:
         self.dept = dept
         
     def __repr__(self):
-        return f"name={self.name}, id={self.id}, department={self.dept}"
+        # return f"name={self.name}, id={self.id}, department={self.dept}"
+        return f"{self.name: <20} {self.id: <5} {self.dept: <20}"
 
 
 # self represents an instance
