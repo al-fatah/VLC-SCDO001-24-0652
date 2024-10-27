@@ -38,6 +38,7 @@ def main():
                         emp_name = input("Enter the New Employee Name: ")
                         emp_dept = input("Enter the New Department: ")
                         new_employee.update_employee(emp_id,emp_name,emp_dept)
+                        break
                     else:
                         print("Employee Not found")
                 except ValueError:
@@ -47,6 +48,7 @@ def main():
             while True:
                 try:
                     emp_id = int(input("Enter the Employee's id to Delete: "))
+                    break
                 except ValueError:
                     print("Enter a number")
 
@@ -55,10 +57,11 @@ def main():
             while True:
                 try:
                     emp_id = int(input("Enter the Employee's id: "))
+                    e = new_employee.show_employee(emp_id)
+                    break
                 except ValueError:
                     print("Enter a number")
 
-            e = new_employee.show_employee(emp_id)
             if e:
                 print(e)
         elif option == 5:
